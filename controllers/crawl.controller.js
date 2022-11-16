@@ -2,7 +2,7 @@ var { Octokit } = require("@octokit/rest");
 var showdown = require('showdown');
 
 const octokit = new Octokit({
-    auth: "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"
+    auth: "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"
 });
 
 const converter = new showdown.Converter();
