@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head.ejs') %>    
+</head>
+<body>
+    <header>
+        <%- include('./partials/header.ejs') %>
+    </header>
+    <main>
+        <div style="display: table-cell; vertical-align: middle;">
+            <table class="table table-bordered table-hover">
+                <thead class="thead-dark" style="text-align: center">
+                  <tr>
+                    <th scope="col">ChangeLog</th>
+                    <th scope="col">Commits</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <%- changelog %>
+                        </td>
+                        <td>
+                            <table class="table table-bordered table-hover">
+                                <% for (let i = data.length - 1; i >= 0; i--) { %>
+                                    <tr scope="row" onclick=redirect(id) id=<%= data[i].url %>>
+                                        <td>
+                                            <%- data[i].message %>
+                                        </td> 
+                                    </tr>
+                                <% } %>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+              </table>
+            </div>   
+    </main>
+    <footer>
+        <%- include('./partials/footer.ejs') %>
+    </footer>  
+</body>
+<script src="js/crawlcommits.js"></script>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head.ejs') %>    
+</head>
+<body>
+    <header>
+        <%- include('./partials/header.ejs') %>
+    </header>
+    <main>
+        <div style="width: 40%;text-align: center;margin: 0; position: absolute;top: 50%;left: 50%;-ms-transform: translate(-50%, -50%);transform: translate(-50%, -50%);">
+            <form action="/releases">
+                <label for="githubrepo" style="font-size: 1.5rem;height: 50%;">Type GitHub Repo Link Here:</label>
+                <br>
+                <input require type="text" name="githubrepo" style="width: 100%;border: none;border:solid 1px #ccc;border-radius: 10px;padding: 10px 40px; line-height: 28px;">
+                <button type="submit" class="btn btn-primary" style="margin-top: 10px; width: 20%">Crawl</button>
+            </form>    
+        </div>
+        
+    </main>
+    <footer>
+        <%- include('./partials/footer.ejs') %>
+    </footer>  
+</body>
+</html>
