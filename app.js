@@ -6,6 +6,7 @@ const indexRouter = require('./routers/index');
 const crawlRouter = require('./routers/crawl');
 
 var app = express();
+const PORT = process.env.PORT || 3000
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -22,6 +23,6 @@ app.use('/', indexRouter);
 app.use('/', crawlRouter);
 
 
-app.listen(process.env.PORT || 3000, () => {
-    console.log(`Server listening on port: ${this.address().port}`);
+app.listen(PORT || 3000, () => {
+    console.log("Express server listening on port %d in %s mode", PORT, app.settings.env);
 });
