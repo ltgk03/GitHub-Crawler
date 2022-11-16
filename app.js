@@ -19,9 +19,6 @@ app.use('/comparecommits/:owner/:repo/:base/:head', express.static(path.join(__d
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-// app.get('/', function (req, res) {
-//     res.send("Hello World!");
-// });
 app.use('/', indexRouter);
 app.use('/', crawlRouter);
 
