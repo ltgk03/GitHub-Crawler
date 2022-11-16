@@ -111,7 +111,7 @@
     "wrappy": "^1.0.2"
   },
   "scripts": {
-    "start": "nodemon app",
+    "start": "node app",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
